@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBMS Project — Login</title>
+    <!-- Use a clean UI font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-wrap">
+      <div class="login-card">
+        <div class="card-top">
+          <div class="logo">DBMS</div>
+        </div>
+        <h2 class="welcome">Welcome Back <span class="leaf">🌿</span></h2>
+        <p class="subtitle">Login to DBMS Project to reclaim your time</p>
+
+        <form id="loginForm">
+          <label class="label">Email Address</label>
+          <input class="input" type="email" id="email" placeholder="Enter your email" required />
+
+          <label class="label">Password</label>
+          <input class="input" type="password" id="password" placeholder="Enter your password" required />
+
+          <div class="row">
+            <label class="remember"><input type="checkbox" id="remember"/> Remember me</label>
+            <a class="forgot" href="#">Forgot Password?</a>
+          </div>
+
+          <button class="primary" type="submit">Login</button>
+
+          <div class="or"><span>OR</span></div>
+
+          <div class="socials">
+            <button type="button" class="google">Google</button>
+            <button type="button" class="facebook">Facebook</button>
+          </div>
+
+          <p class="signup">Don't have an account? <a href="#">Sign Up</a></p>
+        </form>
+
+        <p id="resp" class="resp" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

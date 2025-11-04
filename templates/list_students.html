@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Students</h2>
+  <a class="button" href="/students/add">Add Student</a>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Email</th><th>Year</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ s.id }}</td>
+        <td>{{ s.first_name }} {{ s.last_name }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.enrollment_year }}</td>
+        <td>
+          <a href="/students/{{ s.id }}/edit">Edit</a>
+          <form style="display:inline" method="post" action="/students/{{ s.id }}/delete" onsubmit="return confirm('Delete student?')">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5">No students found.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

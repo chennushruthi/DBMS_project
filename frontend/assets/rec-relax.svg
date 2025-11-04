@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f7fffb"/>
+  <rect x="20" y="28" width="440" height="244" rx="10" fill="#f2fff8" stroke="#d8f7e6"/>
+  <rect x="60" y="130" width="320" height="80" rx="10" fill="#e7fff5"/>
+  <text x="60" y="96" font-family="Poppins, Arial" font-size="18" fill="#1f6b5a">Relaxation Oasis</text>
+</svg>

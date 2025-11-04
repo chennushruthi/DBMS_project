@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf8"/>
+  <rect x="20" y="28" width="440" height="244" rx="10" fill="#fff6f3" stroke="#ffeedd"/>
+  <rect x="60" y="140" width="320" height="80" rx="10" fill="#fff3e8"/>
+  <text x="60" y="96" font-family="Poppins, Arial" font-size="18" fill="#8a5b3a">Family Suite</text>
+</svg>

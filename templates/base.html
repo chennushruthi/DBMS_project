@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StayEase - Where comfort meets technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- cache-bust query so browsers pick up recent CSS changes -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=2" />
+    <style>
+      /* Minimal fallback styles for non-home pages */
+      body{font-family:Poppins,Segoe UI,Arial,Helvetica,sans-serif;margin:0;padding:0}
+      main{max-width:1100px;margin:20px auto;padding:0 16px}
+      .flash{padding:8px;border-radius:4px;margin:8px 0}
+      .flash.success{background:#e6ffed;border:1px solid #b6f2c7}
+      .flash.error{background:#ffecec;border:1px solid #f2b6b6}
+    </style>
+  </head>
+  <body>
+    {% if show_header|default(true) %}
+    <header class="site-header">
+      <div class="brand-wrap">
+        <h1 class="brand">StayEase - Where comfort meets technology</h1>
+      </div>
+        <!-- decorative header artwork (SVG waves + soft blobs) -->
+        <div class="header-bubbles" aria-hidden="true">
+          <svg class="hb-wave" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#e6fffb" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#dff7f0" stop-opacity="0.75" />
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="1">
+                <stop offset="0%" stop-color="#f7fff9" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#e6fff5" stop-opacity="0.2" />
+              </linearGradient>
+              <radialGradient id="blob" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#cfffee" stop-opacity="0.0" />
+              </radialGradient>
+            </defs>
+            <!-- main soft wave -->
+            <path d="M0,120 C150,200 350,40 600,110 C850,180 1050,60 1200,120 L1200,260 L0,260 Z" fill="url(#g1)" class="wave1" />
+            <!-- subtle secondary wave -->
+            <path d="M0,140 C200,80 400,220 600,160 C800,100 1000,200 1200,140 L1200,260 L0,260 Z" fill="url(#g2)" class="wave2" />
+            <!-- decorative soft blobs as circles using radial gradient -->
+            <circle cx="180" cy="60" r="60" fill="url(#blob)" class="blob1" />
+            <circle cx="980" cy="40" r="50" fill="url(#blob)" class="blob2" />
+          </svg>
+        </div>
+      <div class="header-right">
+  <img id="headerAvatar" class="avatar" src="{{ url_for('static', filename='img/avatar.svg') }}" alt="Profile" />
+        <a class="menu-btn" href="#">☰</a>
+      </div>
+    </header>
+    <!-- Profile panel (hidden until avatar clicked) -->
+    <div id="profilePanel" class="profile-panel" aria-hidden="true">
+      <div class="pp-header">
+        <div class="pp-avatar"><img src="{{ url_for('static', filename='img/avatar.svg') }}" alt="Profile"/></div>
+        <div>
+          <div class="pp-name">{{ session.get('user', {}).get('username', 'Guest') }}</div>
+          <div class="pp-role">Member • Verified</div>
+        </div>
+        <div class="pp-status">• Online</div>
+      </div>
+
+      <div class="pp-section">
+        <h4>Basic Info</h4>
+        <div><strong>Email:</strong> <span id="ppEmail">shruthichennu169@gmail.com</span></div>
+        <div><strong>Phone:</strong> <span id="ppPhone">+91 98765 43210</span></div>
+        <div><strong>Location:</strong> <span id="ppLocation">Bengaluru, India</span> <button id="editLocationBtn" class="pp-small-btn" style="margin-left:8px">Edit</button></div>
+      </div>
+
+      <div class="pp-section">
+        <h4>Account Info</h4>
+        <div>Member since: Jan 2024</div>
+        <div>Plan: Premium</div>
+      </div>
+
+      <div class="pp-section">
+        <h4>Activity</h4>
+        <div class="pp-links">
+          <a href="#" class="pp-btn" data-action="bookings">My Bookings</a>
+          <a href="#" class="pp-btn" data-action="payments">Payments & Wallet</a>
+          <a href="#" class="pp-btn" data-action="settings">Settings</a>
+        </div>
+        <div id="ppDetail" aria-live="polite" style="margin-top:10px"></div>
+      </div>
+
+      <div class="pp-section">
+        <h4>Rewards & Reminders</h4>
+        <div class="pp-extra"><span>Reward points:</span><strong>1,250</strong></div>
+        <div class="rewards-bar" aria-hidden="true"><div class="rewards-fill" style="width:72%"></div></div>
+        <div style="margin-top:8px;font-size:13px;color:#475569">Next reminder: <strong>Check-in on 12 Nov</strong></div>
+      </div>
+
+      <div class="pp-footer">
+        <div class="pp-actions">
+          <a class="pp-btn" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+      </div>
+    </div>
+    <!-- Backdrop that captures clicks outside the profile panel -->
+    <div id="profileBackdrop" class="profile-backdrop" aria-hidden="true"></div>
+    {% endif %}
+    <main>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, msg in messages %}
+            <div class="flash {{ category }}">{{ msg }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="brand footer-brand">StayEase</div>
+          <div class="brand-sub footer-sub">Where comfort meets technology</div>
+        </div>
+
+        <div class="footer-contact">
+          <a class="footer-email" href="mailto:hello@stayease.example">hello@stayease.example</a>
+          <div class="footer-legal">© 2025 StayEase. All rights reserved</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+  </body>
+</html>

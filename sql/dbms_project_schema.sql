@@ -1,0 +1,33 @@
+-- Schema for DBMS_project
+CREATE DATABASE IF NOT EXISTS DBMS_project DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE DBMS_project;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(150) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role VARCHAR(50) DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(191) NOT NULL,
+  last_name VARCHAR(191) NOT NULL,
+  email VARCHAR(191) NOT NULL UNIQUE,
+  enrollment_year INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS courses (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  code VARCHAR(50) NOT NULL UNIQUE,
+  title VARCHAR(255) NOT NULL,
+  credits INT DEFAULT 3,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Sample data
+INSERT IGNORE INTO students (first_name, last_name, email, enrollment_year) VALUES
+('Alice','Wang','alice.wang@example.com',2023),
+('Bob','Kumar','bob.kumar@example.com',2022);

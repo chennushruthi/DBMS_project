@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f9fbff"/>
+  <rect x="28" y="30" width="424" height="240" rx="12" fill="#f6fbff" stroke="#e0f1ff"/>
+  <!-- desk and chair -->
+  <rect x="60" y="140" width="220" height="20" rx="4" fill="#e9f3ff"/>
+  <rect x="60" y="160" width="220" height="80" rx="8" fill="#ffffff" stroke="#dbeeff"/>
+  <rect x="300" y="150" width="70" height="80" rx="8" fill="#eaf6ff"/>
+  <text x="60" y="110" font-family="Poppins, Arial" font-size="20" fill="#0f4b66">Workspace</text>
+</svg>

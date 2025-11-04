@@ -1,0 +1,42 @@
+.root{box-sizing:border-box}
+:root{
+  --bg:#eef7f6;
+  --card:#fff;
+  --muted:#7b7f87;
+  --accent-start:#6cc0b4;
+  --accent-end:#4aa89b;
+  --input-border:#e9ecef;
+}
+*{box-sizing:border-box}
+body{font-family:'Poppins',Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#f7f8fa,#eef6f5);min-height:100vh;display:flex;align-items:center;justify-content:center;margin:0}
+.login-wrap{padding:24px}
+.login-card{width:440px;background:var(--card);border-radius:16px;box-shadow:0 18px 50px rgba(30,40,50,0.08);padding:34px;border:1px solid rgba(0,0,0,0.03)}
+.card-top{display:flex;justify-content:center;margin-bottom:8px}
+.logo{width:68px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.welcome{text-align:center;margin:6px 0 0;font-size:22px;font-weight:700}
+.welcome .leaf{font-size:18px;margin-left:6px}
+.subtitle{text-align:center;color:var(--muted);font-size:13px;margin:8px 0 18px}
+.label{display:block;font-size:13px;color:#444;margin-top:10px}
+.input{width:100%;padding:12px;border:1px solid var(--input-border);border-radius:10px;margin-top:8px;background:#fff;transition:box-shadow .15s ease,border-color .15s ease}
+.input:focus{outline:none;box-shadow:0 6px 18px rgba(100,120,160,0.08);border-color:rgba(0,0,0,0.08)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.remember{font-size:13px;color:#444}
+.forgot{font-size:13px;color:var(--accent-start);text-decoration:none}
+.primary{width:100%;background:linear-gradient(180deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:12px;border-radius:10px;margin-top:18px;font-weight:700;box-shadow:0 10px 20px rgba(74,168,155,0.12)}
+.primary:hover{transform:translateY(-1px)}
+.or{text-align:center;color:#bbb;margin:16px 0}
+.or span{background:transparent;padding:0 8px}
+.socials{display:flex;gap:12px;margin-top:8px}
+.socials button{flex:1;padding:10px;border-radius:8px;border:none;color:#fff;font-weight:600}
+.google{background:#e94b39}
+.facebook{background:#3b5998}
+.signup{text-align:center;color:#666;margin-top:14px;font-size:13px}
+.signup a{color:var(--accent-start);text-decoration:none}
+.resp{margin-top:12px;text-align:center;transition:all .18s ease}
+.resp.success{color:var(--accent-start);background:linear-gradient(180deg,#e6f9ef,#ddf7e8);border:1px solid #57b36a;padding:10px;border-radius:8px;box-shadow:0 6px 18px rgba(87,179,106,0.08);color:#1e6b3a}
+.resp.error{color:#c0392b;background:#fdecea;border:1px solid #f1a9a0;padding:10px;border-radius:8px}
+
+/* Responsive */
+@media (max-width:480px){
+  .login-card{width:340px;padding:20px}
+}

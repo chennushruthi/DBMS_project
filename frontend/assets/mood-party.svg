@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fff8ff"/>
+  <rect x="28" y="30" width="424" height="240" rx="12" fill="#fff4fb" stroke="#ffe6f6"/>
+  <!-- party lights and small lounge -->
+  <circle cx="120" cy="80" r="6" fill="#ff9ac6"/>
+  <circle cx="150" cy="60" r="6" fill="#ffd28a"/>
+  <circle cx="180" cy="90" r="6" fill="#b6f3d8"/>
+  <rect x="80" y="150" width="260" height="60" rx="10" fill="#ffeef9"/>
+  <text x="60" y="110" font-family="Poppins, Arial" font-size="20" fill="#8a3a6b">Party Mode</text>
+</svg>

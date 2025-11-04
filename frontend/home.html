@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DBMS Project — Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-left">
+        <div class="brand-wrap">
+          <h1 class="brand">StayEase – Where Comfort Meets Technology</h1>
+          <div class="brand-sub">Sri Balaji residency, Abhyudaya...</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="profile">
+          <img id="profileAvatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36'><rect rx='18' width='36' height='36' fill='%234aa89b'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='white'>S</text></svg>" alt="profile" class="avatar" />
+        </div>
+        <nav class="menu">
+          <button class="menu-btn">☰</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Profile panel (hidden until avatar clicked) -->
+          <div id="profilePanel" class="profile-panel" aria-hidden="true">
+            <div class="pp-header">
+          <div class="pp-avatar"><img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='54' height='54'><rect rx='10' width='54' height='54' fill='%234aa89b'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Poppins, Arial' font-size='22' fill='white'>S</text></svg>" alt="Profile"/></div>
+              <div>
+                <div class="pp-name">Shruthi Rao</div>
+                <div class="pp-role">Member • Verified</div>
+              </div>
+              <div class="pp-status">• Online</div>
+            </div>
+
+            <div class="pp-section">
+              <h4>Basic Info</h4>
+              <div><strong>Email:</strong> <span id="ppEmail">shruthi@example.com</span></div>
+              <div><strong>Phone:</strong> <span id="ppPhone">+91 98765 43210</span></div>
+              <div><strong>Location:</strong> <span id="ppLocation">Bengaluru, India</span> <button id="editLocationBtn" class="pp-small-btn" style="margin-left:8px">Edit</button></div>
+              <div id="editLocationWrap" style="display:none;margin-top:8px">
+                <input id="editLocationInput" type="text" placeholder="Enter your location" style="padding:8px;border-radius:8px;border:1px solid #e6e9ee;width:70%" />
+                <button id="saveLocationBtn" class="pp-small-btn" style="margin-left:6px">Save</button>
+                <button id="cancelLocationBtn" class="pp-small-btn" style="margin-left:6px">Cancel</button>
+              </div>
+            </div>
+
+            <div class="pp-section">
+              <h4>Account Info</h4>
+              <div>Member since: Jan 2024</div>
+              <div>Plan: Premium</div>
+            </div>
+
+            <div class="pp-section">
+              <h4>Activity</h4>
+        <div class="pp-links">
+          <a href="#" class="pp-btn" data-action="bookings">My Bookings</a>
+          <a href="#" class="pp-btn" data-action="payments">Payments & Wallet</a>
+          <a href="#" class="pp-btn" data-action="settings">Settings</a>
+              </div>
+              <div id="ppDetail" aria-live="polite" style="margin-top:10px"></div>
+            </div>
+
+            <div class="pp-section">
+              <h4>Rewards & Reminders</h4>
+              <div class="pp-extra"><span>Reward points:</span><strong>1,250</strong></div>
+              <div class="rewards-bar" aria-hidden="true"><div class="rewards-fill" style="width:72%"></div></div>
+              <div style="margin-top:8px;font-size:13px;color:#475569">Next reminder: <strong>Check-in on 12 Nov</strong></div>
+            </div>
+
+            <div class="pp-footer">
+              <div class="pp-actions">
+                <button class="logout" id="logoutBtn">Logout</button>
+              </div>
+            </div>
+          </div>
+
+    <main class="home-main">
+      <div class="search-card">
+        <div class="search-row">
+          <input id="homeSearch" class="search-input" type="text" placeholder="Search for your fav Hotel" />
+          <button id="searchBtn" class="search-btn">Search</button>
+        </div>
+
+        <!-- Recommended section removed per request -->
+            <!-- Celebration-Based Recommendations (preview) - 3 visible per view, horizontal scroll -->
+            <section class="celebration-strip">
+              <h3 class="section-title">Celebration-Based Recommendations</h3>
+              <div class="celebration-scroll" role="list" aria-label="Celebration recommendations">
+                <a class="celebration-card" href="/stay-types?occasion=birthday" role="listitem">
+                  <div class="card-thumb"> 
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#FFD1DC" rx="12" />
+                      <text x="50%" y="55%" font-size="36" text-anchor="middle" dominant-baseline="middle">🎂</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Birthday Party</div>
+                </a>
+
+                <a class="celebration-card" href="/stay-types?occasion=anniversary" role="listitem">
+                  <div class="card-thumb">
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#FFEFD5" rx="12" />
+                      <text x="50%" y="55%" font-size="34" text-anchor="middle" dominant-baseline="middle">💖</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Anniversary Celebration</div>
+                </a>
+
+                <a class="celebration-card" href="/stay-types?occasion=family" role="listitem">
+                  <div class="card-thumb">
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#D6F5D6" rx="12" />
+                      <text x="50%" y="55%" font-size="32" text-anchor="middle" dominant-baseline="middle">👨‍👩‍👧‍👦</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Family Gathering</div>
+                </a>
+
+                <a class="celebration-card" href="/stay-types?occasion=couple" role="listitem">
+                  <div class="card-thumb">
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#FFDDE6" rx="12" />
+                      <text x="50%" y="55%" font-size="34" text-anchor="middle" dominant-baseline="middle">💞</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Couple Romantic Stay</div>
+                </a>
+
+                <a class="celebration-card" href="/stay-types?occasion=graduation" role="listitem">
+                  <div class="card-thumb">
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#E6F0FF" rx="12" />
+                      <text x="50%" y="55%" font-size="34" text-anchor="middle" dominant-baseline="middle">🎓</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Graduation / Success Party</div>
+                </a>
+
+                <a class="celebration-card" href="/stay-types?occasion=festival" role="listitem">
+                  <div class="card-thumb">
+                    <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" fill="#FFF4D6" rx="12" />
+                      <text x="50%" y="55%" font-size="34" text-anchor="middle" dominant-baseline="middle">🎉</text>
+                    </svg>
+                  </div>
+                  <div class="card-title">Festival Stay (Diwali/New Year/Christmas)</div>
+                </a>
+              </div>
+            </section>
+
+            <!-- Mood / style cards shown under Celebration recommendations (preview) -->
+            <section class="mood-strip">
+              <h3 class="section-title">ROOM MOODS</h3>
+              <div class="mood-scroll" role="list" aria-label="Mood recommendations">
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#FFE6F0" />
+                      <text x="50%" y="60%" font-size="40" text-anchor="middle">💝</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Romantic Gateway</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#FFF0F6" />
+                      <text x="50%" y="60%" font-size="40" text-anchor="middle">🌸</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Luxury Mood</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#E8FFF2" />
+                      <text x="50%" y="60%" font-size="36" text-anchor="middle">🌿</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Nature / Eco Mood</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#F0F9FF" />
+                      <text x="50%" y="60%" font-size="36" text-anchor="middle">💼</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Work Mode</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#FFF8ED" />
+                      <text x="50%" y="60%" font-size="36" text-anchor="middle">🕯️</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Relax &amp; Recharge</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#FFF5FB" />
+                      <text x="50%" y="60%" font-size="36" text-anchor="middle">🎨</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Modern Trendy</div>
+                </a>
+
+                <a class="mood-card" href="#" role="listitem">
+                  <div class="mood-thumb">
+                    <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                      <rect width="100%" height="100%" rx="10" fill="#F3FFF7" />
+                      <text x="50%" y="60%" font-size="34" text-anchor="middle">🧘</text>
+                    </svg>
+                  </div>
+                  <div class="mood-title">Peaceful Minimalist</div>
+                </a>
+              </div>
+            </section>
+            </section>
+
+
+  <!-- Room mood grid -->
+        <section class="mood-section">
+          <h3 class="section-title">Room Mood</h3>
+          <!-- Side-scroll mood strip -->
+          <div class="mood-types" role="list">
+            <a class="mood-item rec-link" href="results.html?mood=romantic" data-mood="romantic">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-candle-dining.svg" alt="Candlelight Dining" />
+                <div class="mood-meta"><div class="mood-title">🕯️ Candlelight Dining</div><div class="mood-desc">Romantic candle-lit dining arrangements and soft lighting</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=nature" data-mood="nature">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-plants.svg" alt="Nature & Plants" />
+                <div class="mood-meta"><div class="mood-title">� Nature & Plants</div><div class="mood-desc">Decorated with small plants and green accents for a natural feel</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=city" data-mood="city">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-city.svg" alt="City Lights" />
+                <div class="mood-meta"><div class="mood-title">🌆 City Lights</div><div class="mood-desc">Modern rooms overlooking the skyline or city center</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=chill" data-mood="chill">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-pool.svg" alt="Swimming Pool" />
+                <div class="mood-meta"><div class="mood-title">� Swimming Pool</div><div class="mood-desc">Rooms or suites with pool-side decor and water features</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=luxury" data-mood="luxury">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-luxury.svg" alt="Luxury" />
+                <div class="mood-meta"><div class="mood-title">🎨 Luxury Mood</div><div class="mood-desc">Premium decor, marble bathrooms, and king-size beds</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=work" data-mood="work">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/study-work.svg" alt="Work Mode" />
+                <div class="mood-meta"><div class="mood-title">💻 Work Mode</div><div class="mood-desc">Desk, high-speed WiFi, and peaceful workspace setup</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=family" data-mood="family">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-family.svg" alt="Family" />
+                <div class="mood-meta"><div class="mood-title">👨‍👩‍👧‍👦 Family Mood</div><div class="mood-desc">Spacious rooms with extra beds and child-safe amenities</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=sleep" data-mood="sleep">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-ventilation.svg" alt="Good Ventilation" />
+                <div class="mood-meta"><div class="mood-title">🌬️ Well-Ventilated</div><div class="mood-desc">Open windows, airflow-friendly layouts and fresh air focus</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=traditional" data-mood="traditional">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-traditional.svg" alt="Traditional" />
+                <div class="mood-meta"><div class="mood-title">🪔 Traditional Touch</div><div class="mood-desc">Culturally themed interiors with local art and heritage vibe</div></div>
+              </article>
+            </a>
+            <a class="mood-item rec-link" href="results.html?mood=party" data-mood="party">
+              <article class="mood-card-mini">
+                <img class="mood-thumb" src="assets/mood-party.svg" alt="Party" />
+                <div class="mood-meta"><div class="mood-title">🎉 Party Mood</div><div class="mood-desc">Rooftop access, vibrant colors, and nightlife-friendly environment</div></div>
+              </article>
+            </a>
+          </div>
+
+          <!-- The large grid below has been removed: moods live in the single horizontal `.mood-types` strip above -->
+        </section>
+      </div>
+
+      <!-- (Right-side mood links removed; moods are available in the side-scroll strip above) -->
+    </main>
+
+    <script src="home.js"></script>
+
+  </body>
+</html>

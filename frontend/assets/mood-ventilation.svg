@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fbfffe"/>
+  <rect x="20" y="24" width="440" height="252" rx="12" fill="#f9fffb" stroke="#e6fff2"/>
+  <!-- open window and airflow lines -->
+  <rect x="60" y="60" width="120" height="100" rx="6" fill="#ffffff" stroke="#dff7ee"/>
+  <rect x="200" y="60" width="120" height="100" rx="6" fill="#ffffff" stroke="#dff7ee"/>
+  <path d="M320 110 q40 -20 80 0" stroke="#98e4c8" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M330 120 q35 -18 70 0" stroke="#bff0dc" stroke-width="3" fill="none" opacity="0.7"/>
+  <text x="60" y="180" font-family="Poppins, Arial" font-size="18" fill="#2b7a63">Well-ventilated Room</text>
+</svg>

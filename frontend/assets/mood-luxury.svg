@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf8"/>
+  <rect x="28" y="30" width="424" height="240" rx="12" fill="#fff6f3" stroke="#ffe8df"/>
+  <!-- bed and chandelier -->
+  <rect x="60" y="140" width="320" height="90" rx="10" fill="#fef0e8"/>
+  <rect x="80" y="110" width="280" height="44" rx="8" fill="#fff1e6"/>
+  <circle cx="240" cy="70" r="18" fill="#fff0d6" stroke="#ffd7a6"/>
+  <text x="60" y="90" font-family="Poppins, Arial" font-size="20" fill="#7a3b2a">Luxury Interior</text>
+</svg>

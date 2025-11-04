@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <main class="stay-main">
+    <div class="stay-wrap">
+      <h2 class="stay-heading">Stay-Type Recommendations</h2>
+      <p class="stay-sub">For: <strong>{{ occasion | replace('_',' ') | title }}</strong></p>
+
+      <div class="stay-options" role="list">
+        {% for s in stay_types %}
+        <a role="listitem" href="{{ url_for('results') }}?type={{ s | urlencode }}&occasion={{ occasion }}" class="stay-option">
+          <div class="so-index">{{ loop.index }}</div>
+          <div class="so-title">{{ s }}</div>
+          <div class="so-chevron">›</div>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="stay-actions">
+        <a class="btn-muted" href="{{ url_for('home') }}">Back</a>
+      </div>
+    </div>
+  </main>
+{% endblock %}

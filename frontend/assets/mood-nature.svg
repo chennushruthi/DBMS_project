@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f3fff8"/>
+  <rect x="28" y="30" width="424" height="240" rx="12" fill="#eafaf4" stroke="#bfeadd"/>
+  <!-- window with view -->
+  <rect x="60" y="60" width="160" height="120" rx="6" fill="#ffffff" stroke="#c5f0d9"/>
+  <path d="M70 80 q40 -28 120 0 v80 h-120 z" fill="#bfe6c8"/>
+  <rect x="240" y="120" width="160" height="80" rx="8" fill="#e2fff1" stroke="#bfeadd"/>
+  <text x="60" y="220" font-family="Poppins, Arial" font-size="20" fill="#2a7a52">Nature View</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fbfffe"/>
+  <rect x="28" y="36" width="424" height="228" rx="12" fill="#f8fffb" stroke="#e6f8ef"/>
+  <!-- cozy bed -->
+  <rect x="70" y="140" width="340" height="80" rx="12" fill="#eef7f2"/>
+  <rect x="90" y="110" width="300" height="44" rx="8" fill="#ffffff"/>
+  <text x="60" y="90" font-family="Poppins, Arial" font-size="20" fill="#2b6b5b">Peaceful Sleep</text>
+</svg>

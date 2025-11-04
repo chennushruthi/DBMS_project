@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f7fbff"/>
+  <rect x="28" y="30" width="424" height="240" rx="12" fill="#f0f7fb" stroke="#d7eaf7"/>
+  <!-- skyline through window -->
+  <rect x="60" y="120" width="40" height="100" fill="#cfe2ff"/>
+  <rect x="110" y="90" width="30" height="130" fill="#bfd8ff"/>
+  <rect x="150" y="120" width="60" height="100" fill="#a9cfff"/>
+  <rect x="240" y="80" width="80" height="140" fill="#c3daff"/>
+  <rect x="340" y="110" width="60" height="110" fill="#9fbfff"/>
+  <text x="60" y="70" font-family="Poppins, Arial" font-size="20" fill="#0f3b63">City Lights</text>
+</svg>

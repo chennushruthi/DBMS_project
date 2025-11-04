@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fbffff"/>
+  <rect x="18" y="20" width="444" height="260" rx="12" fill="#f6fbff" stroke="#e6f8ff"/>
+  <!-- desk area -->
+  <rect x="60" y="120" width="360" height="110" rx="10" fill="#f0f8ff" stroke="#dbefff"/>
+  <rect x="80" y="100" width="120" height="18" rx="6" fill="#ffffff"/>
+  <!-- chair -->
+  <rect x="260" y="170" width="40" height="50" rx="8" fill="#e9f2ff"/>
+  <!-- laptop -->
+  <rect x="110" y="130" width="120" height="8" rx="2" fill="#dfefff"/>
+  <rect x="130" y="118" width="80" height="40" rx="4" fill="#ffffff" stroke="#d0e6ff"/>
+  <!-- lamp -->
+  <rect x="320" y="112" width="16" height="36" rx="3" fill="#fff9e6" stroke="#ffe7b8"/>
+  <path d="M328 106 q4 -6 8 0" fill="#fff2cc"/>
+  <!-- plant on desk -->
+  <circle cx="200" cy="160" r="12" fill="#c8f0d3"/>
+  <text x="80" y="86" font-family="Poppins, Arial" font-size="18" fill="#0f4b66">Study & Work Retreat</text>
+</svg>

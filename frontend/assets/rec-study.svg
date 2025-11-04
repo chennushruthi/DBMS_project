@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fbfffe"/>
+  <rect x="20" y="28" width="440" height="244" rx="10" fill="#f8fffb" stroke="#dff7ee"/>
+  <rect x="60" y="120" width="260" height="80" rx="8" fill="#eefbff"/>
+  <rect x="88" y="92" width="160" height="36" rx="6" fill="#ffffff"/>
+  <text x="60" y="96" font-family="Poppins, Arial" font-size="18" fill="#1f6b5a">Study & Work Retreat</text>
+</svg>

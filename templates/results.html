@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <main class="results-main">
+    <div class="results-wrap">
+      <h2 class="results-heading">Results</h2>
+      <p class="results-sub">You selected <strong>{{ stay_type }}</strong> for <strong>{{ occasion | replace('_',' ') | title }}</strong>.</p>
+
+      <div class="results-note">(This is a placeholder results screen — you can wire real search logic here.)</div>
+
+      <div class="stay-actions">
+        <a class="btn-muted" href="{{ url_for('stay_types') }}?occasion={{ occasion }}">Back to options</a>
+        <a class="btn-primary" href="{{ url_for('home') }}">Home</a>
+      </div>
+    </div>
+  </main>
+{% endblock %}

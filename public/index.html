@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StayEase — Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <!-- Simple SVG logo -->
+      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="24" height="24" rx="5" fill="#fff" />
+        <path d="M4 13c0-4 4-8 8-8s8 4 8 8v5H4v-5z" fill="#0b5cff"/>
+        <circle cx="12" cy="10" r="2" fill="#fff"/>
+      </svg>
+      <div>
+        <h1 style="margin:0;font-size:1.25rem;color:white">StayEase</h1>
+        <div style="font-size:0.85rem;color:rgba(255,255,255,0.9)">Comfort made simple</div>
+      </div>
+    </div>
+    <nav style="margin-top:10px;">
+      <a href="index.html" style="color:white;margin-right:12px;text-decoration:none">Home</a>
+      <a href="rooms.html" style="color:white;margin-right:12px;text-decoration:none">Rooms</a>
+      <a href="admin.html" style="color:white;text-decoration:none">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="text-align:center;padding:40px 20px;">
+      <h2>Welcome to StayEase</h2>
+      <p>Find the perfect room for your stay. Simple booking — no fuss.</p>
+      <p><a href="rooms.html"><button>Book Now</button></a></p>
+    </section>
+
+    <section style="max-width:980px;margin:0 auto;padding:12px;">
+      <h3>Our Highlights</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+        <div class="card"><h4>Cozy Rooms</h4><p>Comfortable, thoughtfully designed rooms.</p></div>
+        <div class="card"><h4>Convenient Location</h4><p>Nearby attractions and easy transport links.</p></div>
+        <div class="card"><h4>Flexible Booking</h4><p>Choose dates, guests and payment type.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

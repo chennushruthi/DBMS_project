@@ -1,0 +1,15 @@
+*{box-sizing:border-box;font-family:Segoe UI, Roboto, Arial, sans-serif}
+body{margin:0;background:#f6f8fa;color:#111}
+header{background:#0b5cff;color:white;padding:24px}
+header h1{margin:0;font-size:1.5rem}
+main{padding:20px;max-width:980px;margin:0 auto}
+#hotel-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:white;border-radius:8px;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.card h3{margin:0 0 6px}
+.card p{margin:6px 0}
+button{background:#0b5cff;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.hidden{display:none}
+form label{display:block;margin:8px 0}
+input, select{padding:8px;border-radius:6px;border:1px solid #ddd;width:100%}
+#booking-result{margin-top:12px}
+@media (max-width:520px){header{padding:16px}main{padding:12px}}

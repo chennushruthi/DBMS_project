@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <defs>
+    <linearGradient id="rom" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff6f6"/>
+      <stop offset="1" stop-color="#fff0ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="#fff6f6"/>
+  <rect x="16" y="20" width="448" height="260" rx="12" fill="url(#rom)" stroke="#ffd9de"/>
+  <!-- bed platform -->
+  <rect x="48" y="110" width="384" height="112" rx="10" fill="#fff0f2" stroke="#ffd1d9"/>
+  <rect x="80" y="90" width="320" height="48" rx="8" fill="#fff7f7"/>
+  <!-- rose petals on bed and floor -->
+  <g fill="#ff4f78" opacity="0.95">
+    <ellipse cx="120" cy="170" rx="8" ry="4"/>
+    <ellipse cx="160" cy="150" rx="7" ry="3"/>
+    <ellipse cx="210" cy="185" rx="9" ry="4"/>
+    <ellipse cx="270" cy="165" rx="6" ry="3"/>
+    <ellipse cx="340" cy="180" rx="8" ry="4"/>
+    <ellipse cx="230" cy="210" rx="10" ry="4"/>
+  </g>
+  <!-- small candles around floor -->
+  <g fill="#fff8e6" stroke="#ffd0b8">
+    <rect x="62" y="222" width="8" height="18" rx="3"/>
+    <rect x="110" y="226" width="8" height="18" rx="3"/>
+    <rect x="160" y="226" width="8" height="18" rx="3"/>
+    <rect x="320" y="226" width="8" height="18" rx="3"/>
+  </g>
+  <!-- heart shape accent -->
+  <path d="M240 70c-16-16-40-16-56 0-16-16-40-16-56 0-20 20-20 50 0 70l56 56 56-56c20-20 20-50 0-70z" fill="#ff6b81" opacity="0.95"/>
+  <text x="68" y="78" font-family="Poppins, Arial" font-size="20" fill="#8a2735">Romantic Getaway</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fbfbff"/>
+  <rect x="20" y="28" width="440" height="244" rx="10" fill="#f6f8ff" stroke="#e6eaff"/>
+  <rect x="60" y="120" width="260" height="80" rx="8" fill="#eef2ff"/>
+  <text x="60" y="96" font-family="Poppins, Arial" font-size="18" fill="#2b3d66">Business Executive</text>
+</svg>

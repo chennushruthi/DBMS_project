@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#f7fcff"/>
+  <rect x="18" y="24" width="444" height="252" rx="12" fill="#f2fcff" stroke="#d7f3fb"/>
+  <!-- pool area -->
+  <rect x="70" y="110" width="340" height="120" rx="12" fill="#d7f9ff" stroke="#bfeeff"/>
+  <path d="M90 190 q60 -20 120 -10 q60 10 120 -10" fill="#c8f0ff" opacity="0.9"/>
+  <rect x="120" y="80" width="80" height="20" rx="6" fill="#fff6e6"/>
+  <text x="60" y="70" font-family="Poppins, Arial" font-size="18" fill="#0f6b74">Swimming Pool Area</text>
+</svg>

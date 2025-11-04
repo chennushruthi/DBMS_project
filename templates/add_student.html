@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if student %}
+    <h2>Edit Student</h2>
+    <form method="post" action="/students/{{ student.id }}/edit">
+  {% else %}
+    <h2>Add Student</h2>
+    <form method="post" action="/students/add">
+  {% endif %}
+    <label>First name<br><input name="first_name" value="{{ student.first_name if student }}"></label><br>
+    <label>Last name<br><input name="last_name" value="{{ student.last_name if student }}"></label><br>
+    <label>Email<br><input name="email" value="{{ student.email if student }}"></label><br>
+    <label>Enrollment year<br><input name="enrollment_year" value="{{ student.enrollment_year if student }}"></label><br>
+    <button type="submit">Save</button>
+    <a href="/students">Cancel</a>
+  </form>
+{% endblock %}

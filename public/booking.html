@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StayEase — Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 style="margin:0;color:white">StayEase</h1>
+    <nav style="margin-top:10px;">
+      <a href="index.html" style="color:white;margin-right:12px;text-decoration:none">Home</a>
+      <a href="rooms.html" style="color:white;margin-right:12px;text-decoration:none">Rooms</a>
+      <a href="admin.html" style="color:white;text-decoration:none">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="max-width:640px;margin:20px auto;">
+      <h2 id="room-title">Booking</h2>
+      <form id="booking-form">
+        <input type="hidden" id="room-id" name="room_id">
+        <label>Name <input id="name" name="name" required></label>
+        <label>Email <input id="email" name="email" type="email" required></label>
+        <label>Check-in <input id="check_in" name="check_in" type="date" required></label>
+        <label>Check-out <input id="check_out" name="check_out" type="date" required></label>
+        <label>Guests <input id="guests" name="guests" type="number" min="1" value="1" required></label>
+        <label>Payment Type
+          <select id="payment_type" name="payment_type">
+            <option value="card">Card</option>
+            <option value="cash">Cash</option>
+          </select>
+        </label>
+        <div style="margin-top:12px;">
+          <button type="submit">Confirm Booking</button>
+          <a href="rooms.html"><button type="button">Back</button></a>
+        </div>
+      </form>
+      <div id="result" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <script src="booking.js"></script>
+</body>
+</html>

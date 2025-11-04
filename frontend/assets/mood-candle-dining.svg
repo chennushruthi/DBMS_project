@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="300" viewBox="0 0 480 300">
+  <defs>
+    <linearGradient id="warm" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff2ee"/>
+      <stop offset="1" stop-color="#fff0e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="#fff6f4"/>
+  <rect x="18" y="18" width="444" height="264" rx="14" fill="url(#warm)" stroke="#ffd9d6"/>
+  <!-- raised platform with bed/sofa suggestion -->
+  <rect x="64" y="140" width="352" height="84" rx="12" fill="#fde6ea"/>
+  <rect x="84" y="120" width="292" height="44" rx="8" fill="#fff4f5"/>
+  <!-- candles along the edge -->
+  <g fill="#fff4e6" stroke="#ffcfbe">
+    <rect x="80" y="200" width="10" height="18" rx="3"/>
+    <rect x="110" y="200" width="10" height="18" rx="3"/>
+    <rect x="140" y="200" width="10" height="18" rx="3"/>
+    <rect x="320" y="200" width="10" height="18" rx="3"/>
+    <rect x="350" y="200" width="10" height="18" rx="3"/>
+  </g>
+  <!-- candle flames -->
+  <g fill="#ffb57a" opacity="0.95">
+    <path d="M85 195 q2 -8 6 0 q-4 -3 -6 0"/>
+    <path d="M115 195 q2 -8 6 0 q-4 -3 -6 0"/>
+    <path d="M145 195 q2 -8 6 0 q-4 -3 -6 0"/>
+    <path d="M325 195 q2 -8 6 0 q-4 -3 -6 0"/>
+    <path d="M355 195 q2 -8 6 0 q-4 -3 -6 0"/>
+  </g>
+  <!-- rose petals scattered -->
+  <g fill="#ff6b88" opacity="0.95">
+    <ellipse cx="140" cy="220" rx="6" ry="3"/>
+    <ellipse cx="160" cy="235" rx="8" ry="3"/>
+    <ellipse cx="200" cy="210" rx="5" ry="3"/>
+    <ellipse cx="240" cy="230" rx="7" ry="3"/>
+    <ellipse cx="300" cy="220" rx="9" ry="4"/>
+    <ellipse cx="220" cy="250" rx="6" ry="3"/>
+  </g>
+  <!-- heart accent near headboard -->
+  <path d="M360 90c-10-10-25-10-35 0-10-10-25-10-35 0-12 12-12 30 0 42l35 36 35-36c12-12 12-30 0-42z" fill="#ff6b81" opacity="0.95"/>
+  <text x="72" y="88" font-family="Poppins, Arial" font-size="20" fill="#a13345">Romantic Arrangement</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e6f9f6"/>
+      <stop offset="100%" stop-color="#dff6f3"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#9fe6de" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#5fc8b9" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background wash -->
+  <rect width="1600" height="600" fill="url(#g1)" />
+
+  <!-- Soft overlapping shapes for a calm interior motif -->
+  <g opacity="0.95">
+    <ellipse cx="1200" cy="120" rx="520" ry="180" fill="url(#g2)" transform="rotate(-12 1200 120)" />
+    <ellipse cx="280" cy="160" rx="420" ry="140" fill="#cff3ec" transform="rotate(8 280 160)" />
+    <rect x="80" y="320" width="460" height="220" rx="26" fill="#ffffff" opacity="0.12" />
+    <rect x="1060" y="340" width="420" height="180" rx="20" fill="#ffffff" opacity="0.10" />
+  </g>
+
+  <!-- Subtle line to hint at a horizon / shelf -->
+  <rect x="0" y="360" width="1600" height="2" fill="#d4f0ea" opacity="0.7" />
+
+  <!-- Minimal icon hint (door/window) to suggest hospitality, aligned right -->
+  <g transform="translate(1180,260) scale(1.0)" opacity="0.98">
+    <rect x="0" y="0" width="140" height="100" rx="8" fill="#ffffff" opacity="0.06" />
+    <rect x="12" y="12" width="116" height="76" rx="6" fill="#ffffff" opacity="0.06" />
+    <rect x="22" y="22" width="36" height="36" rx="4" fill="#ffffff" opacity="0.08" />
+  </g>
+
+  <!-- Soft decorative text (non-critical, will be covered by header brand) -->
+  <text x="48" y="96" font-family="Poppins, Arial" font-size="28" fill="#0f3f36" opacity="0.06">Calm • Classic • Comfortable</text>
+</svg>
