@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DBMS Project — Hotel Booking Prototype
 
 This repository contains a minimal hotel booking DBMS prototype.
@@ -81,3 +82,6 @@ Notes
 - The `db_connect.get_connection()` function returns a new MySQL connection; callers must close it.
 - This demo is intentionally minimal. For production: secure secrets, use migrations, add input validation, and enable proper error handling.
 
+=======
+# DBMS_project
+>>>>>>> 2aaf82f5b02e39d4380261b9e581c89801ffd0fe
